@@ -16,8 +16,9 @@ img {
 }
 .card {
     width: 15%;
-    height: 27vw;
+    height: 20vw;
     perspective: 1000px;
+    margin-bottom: 30px
 }
 .card:hover .card-content {
     transition: transform .6s;
