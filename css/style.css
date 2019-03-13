@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body * { box-sizing: border-box }
+img {
+    width: auto;
+    max-width: 100%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: url("../img/Hearthstone Warrior.jpg") 50% 50%;
+    background-size: cover;
+}
+.card {
+    width: 15%;
+    height: 27vw;
+    perspective: 1000px;
+}
+.card:hover .card-content {
+    transition: transform .6s;
+    transform: rotateY(180deg);
+}
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.front {
+    text-align: center;
+    padding-top: 3%;
+}
+.front span {
+    font-size: 20vw;
+    line-height: 20vw;
+    display: block;
+    height: 19.5vw;
+    width: 95%;
+    background-color: #bfa05d;
+    border-radius: 15px;
+}
+.front {
+    transform: rotateY(180deg);
+}
+.red {
+    color: #ef4340;
+}
